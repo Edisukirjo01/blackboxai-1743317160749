@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflections | Pemuda Bangsa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .reflection-tab {
+            transition: all 0.3s ease;
+        }
+        .reflection-tab:hover {
+            transform: translateY(-2px);
+        }
+        .reflection-content {
+            display: none;
+        }
+        .reflection-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header (Consistent with other pages) -->
+    <header class="bg-[#2A395D] text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-school text-2xl"></i>
+                <h1 class="text-xl font-bold">Pemuda Bangsa Elementary</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-yellow-200">Home</a></li>
+                    <li><a href="activities.html" class="hover:text-yellow-200">Activities</a></li>
+                    <li><a href="assignments.html" class="hover:text-yellow-200">Assignments</a></li>
+                    <li><a href="gallery.html" class="hover:text-yellow-200">Gallery</a></li>
+                    <li><a href="reflection.html" class="hover:text-yellow-200 font-medium">Reflection</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-[#2A395D] mb-4">Learning Reflections</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Share your thoughts and experiences from our Grade 4 journey.</p>
+        </div>
+
+        <!-- Role Selection Tabs -->
+        <div class="flex flex-col md:flex-row gap-4 mb-8">
+            <button class="reflection-tab active-tab px-6 py-4 bg-[#2A395D] text-white rounded-lg font-medium shadow-md" data-role="teacher">
+                <i class="fas fa-chalkboard-teacher mr-2"></i> Teacher Reflections
+            </button>
+            <button class="reflection-tab px-6 py-4 bg-gray-200 rounded-lg font-medium shadow-md hover:bg-gray-300" data-role="student">
+                <i class="fas fa-user-graduate mr-2"></i> Student Reflections
+            </button>
+            <button class="reflection-tab px-6 py-4 bg-gray-200 rounded-lg font-medium shadow-md hover:bg-gray-300" data-role="parent">
+                <i class="fas fa-user-friends mr-2"></i> Parent Reflections
+            </button>
+        </div>
+
+        <!-- Teacher Reflections -->
+        <div id="teacher" class="reflection-content active">
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-semibold mb-4 text-[#2A395D]">Teacher's Reflection Journal</h2>
+                <p class="text-gray-600 mb-6">Document your observations, successes, and areas for improvement in teaching our Grade 4 class.</p>
+                
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-2" for="teacher-date">Date</label>
+                        <input type="date" id="teacher-date" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A395D]">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-2" for="teacher-topic">Topic/Subject</label>
+                        <input type="text" id="teacher-topic" placeholder="e.g. Math - Fractions" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A395D]">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-2" for="teacher-reflection">Reflection</label>
+                        <textarea id="teacher-reflection" rows="6" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A395D]" placeholder="What went well? What challenges did you encounter? How did students respond? What would you do differently next time?"></textarea>
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="submit" class="bg-[#2A395D] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#1E2B4D] transition">Save Reflection</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-[#2A395D]">Recent Reflections</h2>
+                
+                <!-- Reflection 1 -->
+                <div class="border-b border-gray-200 pb-6 mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg font-medium">Science - Plant Growth Experiment</h3>
+                        <span class="text-sm text-gray-500">Oct 28, 2023</span>
+                    </div>
+                    <p class="text-gray-700 mb-2">The hands-on observation activity worked very well. Students were engaged in measuring and recording plant growth daily. However, some groups needed more guidance in accurate measurement techniques. Next time I'll include a demonstration of proper measurement methods before starting.</p>
+                    <div class="flex justify-end">
+                        <button class="text-[#2A395D] font-medium hover:underline">Edit</button>
+                    </div>
+                </div>
+
+                <!-- Reflection 2 -->
+                <div class="border-b border-gray-200 pb-6 mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg font-medium">Math - Multiplication Concepts</h3>
+                        <span class="text-sm text-gray-500">Oct 21, 2023</span>
+                    </div>
+                    <p class="text-gray-700 mb-2">The multiplication bingo game was highly effective for reinforcing facts. Students who typically struggle showed improvement. Need to create differentiated versions for varying skill levels. The visual array method worked well for concrete understanding - will use more visual aids in future lessons.</p>
+                    <div class="flex justify-end">
+                        <button class="text-[#2A395D] font-medium hover:underline">Edit</button>
+                    </div>
+                </div>
+
+                <!-- View All Link -->
+                <div class="text-center mt-6">
+                    <a href="#" class="text-[#2A395D] font-medium hover:underline">View All Reflections →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Reflections -->
+        <div id="student" class="reflection-content">
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-semibold mb-4 text-[#2A395D]">My Learning Journal</h2>
+                <p class="text-gray-600 mb-6">Write about what you learned, what you enjoyed, and what you found challenging.</p>
+                
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-2" for="student-date">Date</label>
+                        <input type="date" id="student-date" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A395D]">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-2" for="student-subject">Subject</label>
+                        <select id="student-subject" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A395D]">
+                            <option>Select a subject</option>
+                            <option>Math</option>
+                            <option>Science</option>
+                            <option>Language Arts</option>
+                            <option>Social Studies</option>
+                            <option>Art</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-2" for="student-reflection">My Reflection</label>
+                        <textarea id="student-reflection" rows="6" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A395D]" placeholder="What did I learn today? What was interesting? What was difficult? How did I feel about my learning?"></textarea>
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="submit" class="bg-[#2A395D] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#1E2B4D] transition">Save Journal</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-[#2A395D]">My Recent Entries</h2>
+                
+                <!-- Entry 1 -->
+                <div class="border-b border-gray-200 pb-6 mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg font-medium">Science - Plant Experiment</h3>
+                        <span class="text-sm text-gray-500">Oct 28, 2023</span>
+                    </div>
+                    <p class="text-gray-700 mb-2">Today we measured our bean plants. Mine grew 5cm this week! I learned plants need water and sunlight to grow. It was fun using the ruler to measure. I wonder why some plants grew more than others?</p>
+                    <div class="flex justify-end">
+                        <button class="text-[#2A395D] font-medium hover:underline">Edit</button>
+                    </div>
+                </div>
+
+                <!-- Entry 2 -->
+                <div class="border-b border-gray-200 pb-6 mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg font-medium">Math - Multiplication</h3>
+                        <span class="text-sm text-gray-500">Oct 21, 2023</span>
+                    </div>
+                    <p class="text-gray-700 mb-2">We played multiplication bingo today. At first it was hard but then I started remembering the answers. 6×7 was tricky but now I know it's 42. I won a sticker for getting bingo!</p>
+                    <div class="flex justify-end">
+                        <button class="text-[#2A395D] font-medium hover:underline">Edit</button>
+                    </div>
+                </div>
+
+                <!-- View All Link -->
+                <div class="text-center mt-6">
+                    <a href="#" class="text-[#2A395D] font-medium hover:underline">View All Entries →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parent Reflections -->
+        <div id="parent" class="reflection-content">
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-semibold mb-4 text-[#2A395D]">Parent Observations</h2>
+                <p class="text-gray-600 mb-6">Share your observations about your child's learning progress and experiences.</p>
+                
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-2" for="parent-date">Date</label>
+                        <input type="date" id="parent-date" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A395D]">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-2" for="parent-student">Student Name</label>
+                        <input type="text" id="parent-student" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A395D]">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-medium mb-2" for="parent-reflection">My Observations</label>
+                        <textarea id="parent-reflection" rows="6" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A395D]" placeholder="What have you noticed about your child's learning? What are they excited about? What challenges are they facing? How can we support them better?"></textarea>
+                    </div>
+                    <div class="flex justify-end">
+                        <button type="submit" class="bg-[#2A395D] text-white px-6 py-2 rounded-lg font-medium hover:bg-[#1E2B4D] transition">Share Reflection</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-[#2A395D]">Recent Observations</h2>
+                
+                <!-- Observation 1 -->
+                <div class="border-b border-gray-200 pb-6 mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg font-medium">About: Ahmad Fauzi</h3>
+                        <span class="text-sm text-gray-500">Oct 28, 2023</span>
+                    </div>
+                    <p class="text-gray-700 mb-2">Ahmad has been very excited about the plant growth experiment. He measures his plant every evening and records the height in his notebook without being reminded. He asked if we could try growing different seeds at home too. However, he's still having some trouble with the math worksheets - particularly the word problems.</p>
+                    <div class="flex justify-end">
+                        <button class="text-[#2A395D] font-medium hover:underline">Edit</button>
+                    </div>
+                </div>
+
+                <!-- Observation 2 -->
+                <div class="border-b border-gray-200 pb-6 mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg font-medium">About: Siti Nurhaliza</h3>
+                        <span class="text-sm text-gray-500">Oct 21, 2023</span>
+                    </div>
+                    <p class="text-gray-700 mb-2">Siti has been practicing her multiplication tables every night since the bingo game. She made her own bingo cards to practice with her siblings. She's very proud of her science project poster and spent extra time making it colorful. She mentioned wanting to read more challenging books during reading time.</p>
+                    <div class="flex justify-end">
+                        <button class="text-[#2A395D] font-medium hover:underline">Edit</button>
+                    </div>
+                </div>
+
+                <!-- View All Link -->
+                <div class="text-center mt-6">
+                    <a href="#" class="text-[#2A395D] font-medium hover:underline">View All Observations →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Consistent with other pages) -->
+    <footer class="bg-[#2A395D] text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Pemuda Bangsa Elementary</h3>
+                    <p>Grade 4 Learning Portal</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-2xl hover:text-yellow-200"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-2xl hover:text-yellow-200"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl hover:text-yellow-200"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm">
+                <p>© 2023 Grade 4 Classroom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu and Reflection Tab Script -->
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('block');
+        });
+
+        // Reflection tab functionality
+        document.querySelectorAll('.reflection-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab button
+                document.querySelectorAll('.reflection-tab').forEach(t => {
+                    t.classList.remove('bg-[#2A395D]', 'text-white', 'active-tab');
+                    t.classList.add('bg-gray-200', 'hover:bg-gray-300');
+                });
+                this.classList.add('bg-[#2A395D]', 'text-white', 'active-tab');
+                this.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+
+                // Show selected content
+                const role = this.getAttribute('data-role');
+                document.querySelectorAll('.reflection-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(role).classList.add('active');
+            });
+        });
+
+        // Set today's date as default in date fields
+        const today = new Date().toISOString().split('T')[0];
+        document.querySelectorAll('input[type="date"]').forEach(dateInput => {
+            dateInput.value = today;
+        });
+    </script>
+</body>
+</html>
