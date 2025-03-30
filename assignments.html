@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments | Pemuda Bangsa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .assignment-card {
+            transition: all 0.3s ease;
+        }
+        .assignment-card:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header (Consistent with other pages) -->
+    <header class="bg-[#2A395D] text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-school text-2xl"></i>
+                <h1 class="text-xl font-bold">Pemuda Bangsa Elementary</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-yellow-200">Home</a></li>
+                    <li><a href="activities.html" class="hover:text-yellow-200">Activities</a></li>
+                    <li><a href="assignments.html" class="hover:text-yellow-200 font-medium">Assignments</a></li>
+                    <li><a href="gallery.html" class="hover:text-yellow-200">Gallery</a></li>
+                    <li><a href="reflection.html" class="hover:text-yellow-200">Reflection</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-[#2A395D] mb-4">Class Assignments</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Find all your homework and daily assignments with clear instructions and due dates.</p>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="flex border-b border-gray-200 mb-8">
+            <button class="tab-button py-4 px-6 font-medium text-[#2A395D] border-b-2 border-[#2A395D]" data-tab="homework">Homework</button>
+            <button class="tab-button py-4 px-6 font-medium text-gray-500 hover:text-[#2A395D]" data-tab="daily">Daily Assignments</button>
+        </div>
+
+        <!-- Homework Tab -->
+        <div id="homework" class="tab-content active">
+            <div class="mb-6">
+                <h2 class="text-2xl font-semibold mb-4 text-[#2A395D]">Current Homework</h2>
+                
+                <!-- Assignment 1 -->
+                <div class="assignment-card bg-white rounded-lg shadow-md p-6 mb-6 hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold">Math Worksheet - Fractions</h3>
+                            <p class="text-gray-500">Assigned: Oct 30, 2023</p>
+                        </div>
+                        <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">Due: Nov 3, 2023</span>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-700 mb-2">Complete pages 45-48 in your math workbook. Show all your work for each problem.</p>
+                        <p class="text-sm text-gray-500">Focus on equivalent fractions and simplifying fractions.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="text-[#2A395D] font-medium hover:underline flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> Download Worksheet
+                        </a>
+                        <a href="#" class="text-[#2A395D] font-medium hover:underline flex items-center">
+                            <i class="fas fa-video mr-2"></i> Watch Explanation
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Assignment 2 -->
+                <div class="assignment-card bg-white rounded-lg shadow-md p-6 mb-6 hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold">Science Project - Plant Life Cycle</h3>
+                            <p class="text-gray-500">Assigned: Oct 25, 2023</p>
+                        </div>
+                        <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">Due: Nov 10, 2023</span>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-700 mb-2">Create a poster showing the life cycle of a plant. Include all stages from seed to mature plant.</p>
+                        <p class="text-sm text-gray-500">Use drawings, photos, or real plant parts. Be creative!</p>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="text-[#2A395D] font-medium hover:underline flex items-center">
+                            <i class="fas fa-file-pdf mr-2"></i> Project Guidelines
+                        </a>
+                        <a href="#" class="text-[#2A395D] font-medium hover:underline flex items-center">
+                            <i class="fas fa-image mr-2"></i> Example Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-semibold mb-4 text-[#2A395D]">Completed Homework</h2>
+                
+                <!-- Completed Assignment 1 -->
+                <div class="assignment-card bg-white rounded-lg shadow-md p-6 mb-6 hover:shadow-lg opacity-75">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold">Reading Log - Week 5</h3>
+                            <p class="text-gray-500">Assigned: Oct 16, 2023</p>
+                        </div>
+                        <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Submitted</span>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-700 mb-2">Read for 20 minutes each day and record your reading in the log.</p>
+                        <p class="text-sm text-gray-500">Remember to have a parent/guardian sign your log each day.</p>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>Submitted on Oct 23, 2023 - Grade: A</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daily Assignments Tab -->
+        <div id="daily" class="tab-content">
+            <div class="mb-6">
+                <h2 class="text-2xl font-semibold mb-4 text-[#2A395D]">Today's Assignments</h2>
+                
+                <!-- Daily Assignment 1 -->
+                <div class="assignment-card bg-white rounded-lg shadow-md p-6 mb-6 hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold">Language Arts - Story Writing</h3>
+                            <p class="text-gray-500">Today, Nov 1, 2023</p>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">In Progress</span>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-700 mb-2">Write a short story (1-2 pages) using at least 5 vocabulary words from this week's list.</p>
+                        <p class="text-sm text-gray-500">Underline each vocabulary word you use in your story.</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mr-4">
+                            <div class="bg-[#2A395D] h-2.5 rounded-full" style="width: 45%"></div>
+                        </div>
+                        <span class="text-sm text-gray-500">45% completed</span>
+                    </div>
+                </div>
+
+                <!-- Daily Assignment 2 -->
+                <div class="assignment-card bg-white rounded-lg shadow-md p-6 mb-6 hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold">Math - Word Problems</h3>
+                            <p class="text-gray-500">Today, Nov 1, 2023</p>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">In Progress</span>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-700 mb-2">Solve the 5 word problems on the worksheet. Show your work for each solution.</p>
+                        <p class="text-sm text-gray-500">Focus on identifying key information in each problem.</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mr-4">
+                            <div class="bg-[#2A395D] h-2.5 rounded-full" style="width: 20%"></div>
+                        </div>
+                        <span class="text-sm text-gray-500">20% completed</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-2xl font-semibold mb-4 text-[#2A395D]">Recent Daily Assignments</h2>
+                
+                <!-- Recent Daily Assignment 1 -->
+                <div class="assignment-card bg-white rounded-lg shadow-md p-6 mb-6 hover:shadow-lg opacity-75">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold">Science - Observation Journal</h3>
+                            <p class="text-gray-500">Oct 31, 2023</p>
+                        </div>
+                        <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Completed</span>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-700 mb-2">Record observations of your bean plant's growth over the past week.</p>
+                        <p class="text-sm text-gray-500">Include measurements and drawings of any changes.</p>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>Completed in class</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submission Section -->
+        <div class="bg-white rounded-xl shadow-md p-6 mt-12">
+            <h2 class="text-2xl font-semibold mb-4 text-[#2A395D]">Submit Homework</h2>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-medium mb-2" for="assignment">Assignment</label>
+                    <select id="assignment" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A395D]">
+                        <option>Select an assignment</option>
+                        <option>Math Worksheet - Fractions</option>
+                        <option>Science Project - Plant Life Cycle</option>
+                        <option>Reading Log - Week 6</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-medium mb-2" for="file">Upload File</label>
+                    <div class="flex items-center justify-center w-full">
+                        <label for="file" class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100">
+                            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                <i class="fas fa-cloud-upload-alt text-3xl text-gray-400 mb-2"></i>
+                                <p class="mb-2 text-sm text-gray-500">Click to upload or drag and drop</p>
+                                <p class="text-xs text-gray-500">PDF, DOCX, or JPG (Max. 5MB)</p>
+                            </div>
+                            <input id="file" type="file" class="hidden" />
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-medium mb-2" for="notes">Additional Notes</label>
+                    <textarea id="notes" rows="3" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A395D]" placeholder="Any special instructions or comments..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#2A395D] text-white py-3 rounded-lg font-medium hover:bg-[#1E2B4D] transition">Submit Assignment</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Authentication Modal -->
+    <div id="auth-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-6 max-w-sm w-full">
+            <h3 class="text-xl font-semibold mb-4">Enter Admin Password</h3>
+            <input type="password" id="admin-password" placeholder="Password" class="w-full px-3 py-2 border rounded-lg mb-4">
+            <div class="flex justify-end space-x-3">
+                <button id="cancel-auth" class="px-4 py-2 border border-gray-300 rounded-lg">Cancel</button>
+                <button id="submit-auth" class="px-4 py-2 bg-[#2A395D] text-white rounded-lg">Submit</button>
+            </div>
+            <p id="auth-error" class="text-red-500 text-sm mt-2 hidden">Incorrect password</p>
+        </div>
+    </div>
+
+    <!-- Mobile Menu, Auth, and Reflection Tab Script -->
+    <script>
+        // Password configuration
+        const ADMIN_PASSWORD = "PemudaBangsa2023";
+        const AUTH_KEY = "grade4-auth";
+        
+        // Check authentication status
+        function checkAuth() {
+            return sessionStorage.getItem(AUTH_KEY) === ADMIN_PASSWORD;
+        }
+        
+        // Show/hide edit controls based on auth status
+        function toggleEditControls() {
+            const editButtons = document.querySelectorAll('[data-edit]');
+            const isAuthenticated = checkAuth();
+            
+            editButtons.forEach(btn => {
+                if (isAuthenticated) {
+                    btn.classList.remove('hidden');
+                } else {
+                    btn.classList.add('hidden');
+                }
+            });
+        }
+        
+        // Auth modal handling
+        document.getElementById('submit-auth').addEventListener('click', function() {
+            const password = document.getElementById('admin-password').value;
+            if (password === ADMIN_PASSWORD) {
+                sessionStorage.setItem(AUTH_KEY, password);
+                document.getElementById('auth-modal').classList.add('hidden');
+                toggleEditControls();
+            } else {
+                document.getElementById('auth-error').classList.remove('hidden');
+            }
+        });
+        
+        document.getElementById('cancel-auth').addEventListener('click', function() {
+            document.getElementById('auth-modal').classList.add('hidden');
+        });
+        
+        // Mobile menu toggle
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('block');
+        });
+
+        // Tab functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Update tab buttons
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('text-[#2A395D]', 'border-b-2', 'border-[#2A395D]');
+                    btn.classList.add('text-gray-500');
+                });
+                this.classList.add('text-[#2A395D]', 'border-b-2', 'border-[#2A395D]');
+                this.classList.remove('text-gray-500');
+
+                // Show selected tab content
+                const tabId = this.getAttribute('data-tab');
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // File upload display
+        document.getElementById('file').addEventListener('change', function(e) {
+            if (e.target.files.length > 0) {
+                const fileName = e.target.files[0].name;
+                const uploadArea = e.target.previousElementSibling;
+                uploadArea.innerHTML = `
+                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                        <i class="fas fa-file-alt text-3xl text-[#2A395D] mb-2"></i>
+                        <p class="mb-2 text-sm text-gray-700">${fileName}</p>
+                        <p class="text-xs text-gray-500">Click to change file</p>
+                    </div>
+                `;
+            }
+        });
+
+        // Initial check for authentication
+        toggleEditControls();
+    </script>
+</body>
+</html>
