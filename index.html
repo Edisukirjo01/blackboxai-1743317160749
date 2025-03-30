@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemuda Bangsa Grade 4 Learning Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-[#2A395D] text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-school text-2xl"></i>
+                <h1 class="text-xl font-bold">Pemuda Bangsa Elementary</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-yellow-200 font-medium">Home</a></li>
+                    <li><a href="activities.html" class="hover:text-yellow-200">Activities</a></li>
+                    <li><a href="assignments.html" class="hover:text-yellow-200">Assignments</a></li>
+                    <li><a href="gallery.html" class="hover:text-yellow-200">Gallery</a></li>
+                    <li><a href="reflection.html" class="hover:text-yellow-200">Reflection</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-[#2A395D] to-[#3B82F6] text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">Welcome Grade 4 Students!</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Explore learning activities, assignments, and memories from our classroom.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="activities.html" class="bg-white text-[#2A395D] px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">View Activities</a>
+                <a href="gallery.html" class="bg-transparent border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-[#2A395D] transition">See Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[#2A395D]">Our Learning Portal</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Activity Card -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg" alt="Students doing science experiment" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Learning Activities</h3>
+                        <p class="text-gray-600 mb-4">Discover fun classroom activities and projects we've done together.</p>
+                        <a href="activities.html" class="text-[#2A395D] font-medium hover:underline">Explore Activities →</a>
+                    </div>
+                </div>
+
+                <!-- Assignment Card -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://images.pexels.com/photos/4145354/pexels-photo-4145354.jpeg" alt="Student doing homework" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Assignments</h3>
+                        <p class="text-gray-600 mb-4">Find your homework and daily assignments with clear instructions.</p>
+                        <a href="assignments.html" class="text-[#2A395D] font-medium hover:underline">View Assignments →</a>
+                    </div>
+                </div>
+
+                <!-- Gallery Card -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+                    <img src="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg" alt="Classroom photo" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Memory Gallery</h3>
+                        <p class="text-gray-600 mb-4">Relive special moments from our Grade 4 journey together.</p>
+                        <a href="gallery.html" class="text-[#2A395D] font-medium hover:underline">Browse Gallery →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#2A395D] text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Pemuda Bangsa Elementary</h3>
+                    <p>Grade 4 Learning Portal</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-2xl hover:text-yellow-200"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-2xl hover:text-yellow-200"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl hover:text-yellow-200"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm">
+                <p>© 2023 Grade 4 Classroom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('block');
+        });
+    </script>
+</body>
+</html>
