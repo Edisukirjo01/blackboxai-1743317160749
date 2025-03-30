@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Activities | Pemuda Bangsa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .activity-card {
+            transition: all 0.3s ease;
+        }
+        .activity-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header (Same as index.html) -->
+    <header class="bg-[#2A395D] text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-school text-2xl"></i>
+                <h1 class="text-xl font-bold">Pemuda Bangsa Elementary</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-yellow-200">Home</a></li>
+                    <li><a href="activities.html" class="hover:text-yellow-200 font-medium">Activities</a></li>
+                    <li><a href="assignments.html" class="hover:text-yellow-200">Assignments</a></li>
+                    <li><a href="gallery.html" class="hover:text-yellow-200">Gallery</a></li>
+                    <li><a href="reflection.html" class="hover:text-yellow-200">Reflection</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-[#2A395D] mb-4">Our Learning Activities</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Explore the fun and educational activities we've done in our Grade 4 classroom.</p>
+        </div>
+
+        <!-- Search and Filter Section -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div class="relative flex-grow max-w-xl">
+                    <input type="text" placeholder="Search activities..." class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2A395D]">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button class="px-4 py-2 bg-[#2A395D] text-white rounded-lg hover:bg-[#1E2B4D] transition">All</button>
+                    <button class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition">Science</button>
+                    <button class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition">Math</button>
+                    <button class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition">Language</button>
+                    <button class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition">Art</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activities Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Activity 1 -->
+            <div class="activity-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg">
+                <img src="https://images.pexels.com/photos/4148603/pexels-photo-4148603.jpeg" alt="Science experiment" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Science</span>
+                        <span class="text-sm text-gray-500">Sept 15, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Volcano Eruption Experiment</h3>
+                    <p class="text-gray-600 mb-4">We created mini volcanoes and learned about chemical reactions using baking soda and vinegar.</p>
+                    <button class="text-[#2A395D] font-medium hover:underline flex items-center">
+                        View Details <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Activity 2 -->
+            <div class="activity-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg">
+                <img src="https://images.pexels.com/photos/5905482/pexels-photo-5905482.jpeg" alt="Math activity" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Math</span>
+                        <span class="text-sm text-gray-500">Sept 22, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Fraction Pizza Party</h3>
+                    <p class="text-gray-600 mb-4">Learning fractions by dividing paper pizzas into slices and sharing with classmates.</p>
+                    <button class="text-[#2A395D] font-medium hover:underline flex items-center">
+                        View Details <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Activity 3 -->
+            <div class="activity-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg">
+                <img src="https://images.pexels.com/photos/5428003/pexels-photo-5428003.jpeg" alt="Reading activity" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Language</span>
+                        <span class="text-sm text-gray-500">Oct 5, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Storytelling Workshop</h3>
+                    <p class="text-gray-600 mb-4">Students created and presented their own short stories using vocabulary words we learned.</p>
+                    <button class="text-[#2A395D] font-medium hover:underline flex items-center">
+                        View Details <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Activity 4 -->
+            <div class="activity-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg">
+                <img src="https://images.pexels.com/photos/3817583/pexels-photo-3817583.jpeg" alt="Art project" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Art</span>
+                        <span class="text-sm text-gray-500">Oct 12, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Watercolor Landscapes</h3>
+                    <p class="text-gray-600 mb-4">Exploring color blending techniques to paint beautiful nature scenes.</p>
+                    <button class="text-[#2A395D] font-medium hover:underline flex items-center">
+                        View Details <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Activity 5 -->
+            <div class="activity-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg">
+                <img src="https://images.pexels.com/photos/5905922/pexels-photo-5905922.jpeg" alt="Group project" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded">Science</span>
+                        <span class="text-sm text-gray-500">Oct 19, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Plant Growth Observation</h3>
+                    <p class="text-gray-600 mb-4">Tracking the growth of bean plants under different conditions in our classroom.</p>
+                    <button class="text-[#2A395D] font-medium hover:underline flex items-center">
+                        View Details <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Activity 6 -->
+            <div class="activity-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg">
+                <img src="https://images.pexels.com/photos/5212359/pexels-photo-5212359.jpeg" alt="Math game" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Math</span>
+                        <span class="text-sm text-gray-500">Oct 26, 2023</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Multiplication Bingo</h3>
+                    <p class="text-gray-600 mb-4">Fun game to practice multiplication facts with prizes for winners!</p>
+                    <button class="text-[#2A395D] font-medium hover:underline flex items-center">
+                        View Details <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center mt-12">
+            <nav class="inline-flex rounded-md shadow">
+                <a href="#" class="px-3 py-2 rounded-l-md border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <a href="#" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-[#2A395D] font-medium">1</a>
+                <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">2</a>
+                <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">3</a>
+                <a href="#" class="px-3 py-2 rounded-r-md border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </nav>
+        </div>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-[#2A395D] text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Pemuda Bangsa Elementary</h3>
+                    <p>Grade 4 Learning Portal</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-2xl hover:text-yellow-200"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-2xl hover:text-yellow-200"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl hover:text-yellow-200"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-sm">
+                <p>© 2023 Grade 4 Classroom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('block');
+        });
+
+        // Simple search functionality
+        document.querySelector('input[type="text"]').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            document.querySelectorAll('.activity-card').forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const desc = card.querySelector('p').textContent.toLowerCase();
+                if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.bg-gray-200').forEach(button => {
+            button.addEventListener('click', function() {
+                const category = this.textContent.trim();
+                document.querySelectorAll('.activity-card').forEach(card => {
+                    const badge = card.querySelector('.bg-\\[\\#2A395D\\]') || 
+                                 card.querySelector('.bg-blue-100') || 
+                                 card.querySelector('.bg-green-100') || 
+                                 card.querySelector('.bg-yellow-100') || 
+                                 card.querySelector('.bg-purple-100') || 
+                                 card.querySelector('.bg-red-100');
+                    if (category === 'All' || badge.textContent.trim() === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
